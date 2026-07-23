@@ -9,8 +9,10 @@
   safety regime: Japan's METI Mine Safety jurisdiction over crude-oil
   and natural-gas wells, the US BSEE Outer Continental Shelf rule
   (30 CFR Part 250) plus OSHA Process Safety Management, the UK HSE
-  Offshore Safety Directive regime, and the Norwegian Petroleum Safety
-  Authority's Activities Regulations. The required-evidence set
+  Offshore Safety Directive regime, the Norwegian Petroleum Safety
+  Authority's Activities Regulations, and Brazil's ANP well-integrity
+  regime (Resolução ANP nº 46/2016, Sistema de Gerenciamento da
+  Integridade de Poços -- SGIP). The required-evidence set
   (mining/concession right, casing-integrity log, BOP test record,
   cementing record) mirrors the well-construction and well-control
   evidence a regulator actually demands before a well is opened to
@@ -67,6 +69,15 @@
                               "Casing-integrity log"
                               "Blowout-preventer (BOP) test record"
                               "Cementing record"]
+          :h2s-idlh-ppm 50}
+   "BRA" {:name "Brazil"
+          :owner-authority "Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP)"
+          :legal-basis "Resolução ANP nº 46, de 1º de novembro de 2016 (institui o Regime de Segurança Operacional para Integridade de Poços de Petróleo e Gás Natural); Regulamento Técnico do Sistema de Gerenciamento da Integridade de Poços (SGIP)"
+          :provenance "https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/seguranca-operacional/sistema-de-gerenciamento-da-integridade-de-pocos-sgip"
+          :required-evidence ["Contrato de concessão/partilha de produção com a ANP (E&P concession/production-sharing contract record)"
+                              "Registro de integridade do revestimento (casing-integrity log)"
+                              "Registro de teste do preventor de erupção -- BOP (blowout-preventer test record)"
+                              "Registro de cimentação (cementing record)"]
           :h2s-idlh-ppm 50}})
 
 (defn spec-basis

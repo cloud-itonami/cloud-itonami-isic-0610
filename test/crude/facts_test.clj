@@ -6,12 +6,17 @@
   (is (some? (facts/spec-basis "JPN")))
   (is (string? (:provenance (facts/spec-basis "JPN")))))
 
-(deftest all-four-seeded-jurisdictions-have-an-h2s-idlh
+(deftest all-seeded-jurisdictions-have-an-h2s-idlh
   ;; every seeded upstream jurisdiction actually has a real H2S IDLH
   ;; threshold reported honestly here
-  (doseq [iso3 ["JPN" "USA" "GBR" "NOR"]]
+  (doseq [iso3 ["JPN" "USA" "GBR" "NOR" "BRA"]]
     (is (some? (facts/idlh-ppm iso3)) (str iso3 " idlh-ppm"))
     (is (number? (facts/idlh-ppm iso3)) (str iso3 " idlh-ppm is numeric"))))
+
+(deftest bra-has-a-spec-basis
+  (is (some? (facts/spec-basis "BRA")))
+  (is (string? (:provenance (facts/spec-basis "BRA"))))
+  (is (= 4 (count (facts/evidence-checklist "BRA")))))
 
 (deftest unknown-jurisdiction-has-no-fabricated-spec-basis
   (is (nil? (facts/spec-basis "ATL"))))

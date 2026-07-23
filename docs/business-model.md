@@ -239,16 +239,17 @@ discipline, here applied to this vertical's OWN pure registry functions.
 
 ## Jurisdiction coverage (honest)
 
-`crude.facts/catalog` currently seeds 4 jurisdictions with an official spec-
+`crude.facts/catalog` currently seeds 5 jurisdictions with an official spec-
 basis, each a REAL regime: Japan (METI Mine Safety Regulations / 鉱山保安規則
 over crude-oil and natural-gas wells), the United States (BSEE, 30 C.F.R. Part
 250, plus OSHA Process Safety Management), the United Kingdom (HSE Offshore
-Safety Division), and Norway (Petroleum Safety Authority, Activities
-Regulations). The NIOSH H2S IDLH (50 ppm) is the internationally cited
-acute-toxicity reference each of these regulators' sour-service rules are
-ultimately grounded in. This is a starting catalog to prove the governor
-contract end-to-end, not a claim of global coverage (4 of ~194 jurisdictions
-worldwide). Adding a jurisdiction is additive: one map entry in
+Safety Division), Norway (Petroleum Safety Authority, Activities
+Regulations), and Brazil (ANP, Resolução ANP nº 46/2016, Sistema de
+Gerenciamento da Integridade de Poços -- SGIP). The NIOSH H2S IDLH (50 ppm) is
+the internationally cited acute-toxicity reference each of these regulators'
+sour-service rules are ultimately grounded in. This is a starting catalog to
+prove the governor contract end-to-end, not a claim of global coverage (5 of
+~194 jurisdictions worldwide). Adding a jurisdiction is additive: one map entry in
 `crude.facts/catalog`, citing a real official source -- never fabricate a
 jurisdiction's requirements to make coverage look bigger.
 

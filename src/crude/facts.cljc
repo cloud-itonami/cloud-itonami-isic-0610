@@ -78,6 +78,48 @@
                               "Registro de integridade do revestimento (casing-integrity log)"
                               "Registro de teste do preventor de erupção -- BOP (blowout-preventer test record)"
                               "Registro de cimentação (cementing record)"]
+          :h2s-idlh-ppm 50}
+   ;; CAN citations independently fetched+read directly this session
+   ;; (2026-07-23) from laws-lois.justice.gc.ca's own FullText.html for
+   ;; both the parent Act and its drilling regulations (both HTTP 200,
+   ;; no bot-detection challenge). Confirmed verbatim on the Act's own
+   ;; s.5.02 (Safety of Works and Activities): "The Commission of the
+   ;; Canadian Energy Regulator shall, before issuing an authorization
+   ;; for a work or activity ..., consider the safety of the work or
+   ;; activity by reviewing, in consultation with the Chief Safety
+   ;; Officer, the system as a whole and its components, including its
+   ;; installations, equipment, operating procedures and personnel."
+   ;; Confirmed verbatim on the Regulations' own s.36(1) (Well Control):
+   ;; "The operator shall ensure that, during all well operations,
+   ;; reliably operating well control equipment is installed to control
+   ;; kicks, prevent blow-outs and safely carry out all well activities
+   ;; and operations, including drilling, completion and workover
+   ;; operations."; s.42 (Waiting on Cement Time): "After the cementing
+   ;; of any casing or casing liner and before drilling out the casing
+   ;; shoe, the operator shall ensure that the cement has reached the
+   ;; minimum compressive strength sufficient to support the casing and
+   ;; provide zonal isolation."; s.43 titled "Casing Pressure Testing".
+   ;; HONEST DISCLOSED INCONSISTENCY (not papered over): the
+   ;; Regulations' own Interpretation section still defines "Board" as
+   ;; "the National Energy Board established by section 3 of the
+   ;; National Energy Board Act" -- this defined term has NOT been
+   ;; textually amended since the Regulations' own last-amended date of
+   ;; 2009-12-31 (per the Regulations' own consolidation metadata,
+   ;; "current to 2026-05-26"), even though the parent Act's own s.5.02
+   ;; (confirmed above, itself amended in 2019) already uses "Commission
+   ;; of the Canadian Energy Regulator" -- the National Energy Board's
+   ;; 2019 successor under the Canadian Energy Regulator Act. This entry
+   ;; cites the Act's own current terminology (CER) as :owner-authority
+   ;; rather than the Regulations' own stale "Board"/NEB defined term.
+   "CAN" {:name "Canada"
+          :owner-authority "Canada Energy Regulator (CER) -- the Commission of the Canadian Energy Regulator, in consultation with the Chief Safety Officer (Canada Oil and Gas Operations Act s.5.02)"
+          :legal-basis "Canada Oil and Gas Operations Act (R.S.C., 1985, c. O-7); Canada Oil and Gas Drilling and Production Regulations (SOR/2009-315)"
+          :national-spec "Act s.5.02 (Safety of Works and Activities): the Commission reviews, in consultation with the Chief Safety Officer, the safety of installations/equipment/operating procedures/personnel before authorizing a work or activity; Regulations s.36(1) (Well Control): reliably operating well control equipment must be installed to control kicks and prevent blow-outs; s.42 (Waiting on Cement Time) and s.43 (Casing Pressure Testing) set casing/cementing verification requirements"
+          :provenance "https://laws-lois.justice.gc.ca/eng/acts/o-7/ ; https://laws-lois.justice.gc.ca/eng/regulations/SOR-2009-315/"
+          :required-evidence ["Lease/concession-right record"
+                              "Casing-integrity log"
+                              "Blowout-preventer (BOP) test record"
+                              "Cementing record"]
           :h2s-idlh-ppm 50}})
 
 (defn spec-basis

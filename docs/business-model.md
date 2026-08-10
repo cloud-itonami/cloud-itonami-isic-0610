@@ -50,6 +50,55 @@ scratch.
 - support retainer with SLA
 - SCADA and production-accounting integration
 
+| Package | Customer | Price shape |
+|---|---|---|
+| Self-host starter | operator's own IT / production engineer | setup fee + optional support retainer |
+| Managed Starter | one independent onshore/marginal-field operator (~30 wells, ~8 field+office staff) | ¥38,000/月 flat |
+
+**Market-anchored (2026-08-10)**: benchmarked against 6 real competitor
+families. **Only 2 publish real numbers**, and both are *generic* HSE
+platforms rather than upstream-petroleum tools: **SafetyCulture** Premium at
+`$24 / seat / month` annual (`$29` month-to-month) on its own pricing page
+(<https://safetyculture.com/pricing/>), and **Make Safety Easy** at
+`$39/user/mo` with no minimums (<https://makesafetyeasy.com/pricing>).
+**GreaseBook** publishes no price page at all; the only figure it states
+anywhere is a blog sentence — "a few dollars per well per month… For a
+30-well operator, that is under $200 a month"
+(<https://www.greasebook.com/blog/oil-and-gas-production-software-free/>).
+**The remaining upstream-specific vendors disclose nothing**: **Intelex**
+routes its Pricing link to `/request-price`
+(<https://www.intelex.com/pricing/>); **SiteDocs** says only "Annual
+subscription based on company size" and requires an initial call
+(<https://www.sitedocs.com/pricing/>); **Peloton (WellView)**, **Quorum**
+and **Enverus** have no price page whatsoever
+(<https://www.quorumsoftware.com/solutions/execution-well-operations/well-data-management/>).
+Converting at ~¥150/$ for the assumed 8-staff operator: SafetyCulture lands
+at ~¥28,800/月 (annual) to ~¥34,800/月 (monthly), Make Safety Easy at
+~¥46,800/月, GreaseBook's 30-well example under ~¥30,000/月.
+
+**¥38,000/月 sits near the middle of that ¥28,800–¥46,800 band.** It is not
+pushed to the top because this actor is narrower than either published
+comparator — it is not an inspection app, not incident management, and not
+production accounting; it is regulatory assessment, evidence checklisting,
+the lift/settlement approval gate, and the ledger. It is not pushed to the
+bottom because **that band is made entirely of generic HSE tools, and not one
+upstream-petroleum vendor publishes anything at all.** ¥28,800 is therefore a
+*reference point, not a floor* — the opacity of Intelex / SiteDocs / Peloton
+/ Quorum / Enverus is itself evidence that this industry's real spend sits
+above the published band, so anchoring at the bottom of it would understate
+the market. The tier is flat rather than per-seat, so it does not grow as the
+operator's headcount goes from 8 to 15 the way every published comparator
+does.
+
+**Subscribe (2026-08-10)**: a live Stripe Payment Link for the Managed
+Starter tier (¥38,000/月 flat) is available now —
+[**subscribe to Managed Starter**](https://buy.stripe.com/6oU00keuX3966Hm3HIeEo0f).
+This is a no-code Stripe-hosted checkout; nothing in this repo's actor code
+changed. Fulfilment is manual today — after subscribing, contact gftdcojp to
+arrange managed-tenant setup. **No operator has claimed or subscribed to this
+tier yet — this is a live, working checkout with zero paid tenants, not a
+claim of existing revenue.**
+
 ## The `:well-safety-governor` Decision Rule
 
 This blueprint's `:itonami.blueprint/governor` is `:well-safety-governor`. It

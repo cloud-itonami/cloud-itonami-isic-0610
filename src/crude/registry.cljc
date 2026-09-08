@@ -30,7 +30,7 @@
   real well or settling real production itself (that is `crude.
   operation`'s `:well/lift`/`:production/settle`, always human-gated --
   see README `Actuation`)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- unsigned-certificate
   "Every certificate this actor produces is UNSIGNED -- signature is
@@ -131,7 +131,7 @@
     (throw (ex-info "well-lift: jurisdiction required" {})))
   (when (< sequence 0)
     (throw (ex-info "well-lift: sequence must be >= 0" {})))
-  (let [lift-number (str (str/upper-case jurisdiction) "-LIFT-" (zero-pad sequence 6))
+  (let [lift-number (str (str/upper jurisdiction) "-LIFT-" (zero-pad sequence 6))
         record {"record_id" lift-number
                 "kind" "well-lift-draft"
                 "well_id" well-id
@@ -156,7 +156,7 @@
     (throw (ex-info "production-settlement: jurisdiction required" {})))
   (when (< sequence 0)
     (throw (ex-info "production-settlement: sequence must be >= 0" {})))
-  (let [settlement-number (str (str/upper-case jurisdiction) "-PROD-" (zero-pad sequence 6))
+  (let [settlement-number (str (str/upper jurisdiction) "-PROD-" (zero-pad sequence 6))
         record {"record_id" settlement-number
                 "kind" "production-settlement-draft"
                 "well_id" well-id

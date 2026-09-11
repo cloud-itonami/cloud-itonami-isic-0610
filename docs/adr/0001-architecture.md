@@ -182,7 +182,7 @@ hiccup can never auto-lift a well or auto-settle production.
 - `MemStore` || `DatomicStore` parity is proven by
   `test/crude/store_contract_test.cljk`.
 - 41 tests / 204 assertions pass; lint is clean; the demo
-  (`clojure -M:dev:run`) walks one clean lift + settlement lifecycle, plus
+  (`kbb -M:dev:run`) walks one clean lift + settlement lifecycle, plus
   eight HARD-hold scenarios (no spec-basis, reservoir pressure, annular/
   MAASP, water cut, H2S/IDLH, integrity flag, double lift, double
   settlement), end-to-end.

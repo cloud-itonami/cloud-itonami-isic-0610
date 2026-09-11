@@ -74,7 +74,7 @@ never autonomous, at any phase, by construction.** Two independent
 layers enforce this (`crude.governor`'s `:well/lift`/`:production/
 settle` high-stakes gate and `crude.phase`'s phase table, which never
 puts either op in any phase's `:auto` set) -- see `crude.phase`'s
-docstring and `test/crude/phase_test.clj`'s `well-lift-never-auto-at-
+docstring and `test/crude/phase_test.cljk`'s `well-lift-never-auto-at-
 any-phase`/`production-settle-never-auto-at-any-phase`. The actor may
 draft, check and recommend; a human production superintendent is
 always the one who actually opens a well to flow or settles a
@@ -172,14 +172,14 @@ generic robotics/identity/forms/dmn/bpmn/audit-ledger stack.
 
 | File | Role |
 |---|---|
-| `src/crude/store.cljc` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + lift AND production history (dual history). The double-actuation guard checks dedicated `:crude-lifted?`/`:production-settled?` booleans rather than a `:status` value |
-| `src/crude/registry.cljc` | Lift/settlement draft records, plus the self-contained well-safety range-check pure functions (`reservoir-pressure-out-of-range?`, `well-integrity-annular-pressure-excessive?`, `water-cut-excessive?`, `h2s-toxic?`) the governor re-verifies against -- no external capability library to delegate to |
-| `src/crude/facts.cljc` | Per-jurisdiction well-construction/well-control/sour-service catalog with an official spec-basis citation + NIOSH H2S IDLH per entry, honest coverage reporting |
-| `src/crude/crudeadvisor.cljc` | **CrudeAdvisor** -- `mock-advisor` ‖ `llm-advisor`; intake/reservoir-assessment/lift/settlement proposals |
-| `src/crude/governor.cljc` | **Well Safety Governor** -- 7 HARD checks (spec-basis · evidence-incomplete · reservoir-pressure-out-of-range, the aerospace two-sided-tolerance discipline · well-integrity-annular-pressure-excessive, the fabrication ratio discipline · water-cut-excessive · h2s-toxic-threshold · integrity-flag-unresolved) + 2 double-actuation guards + 1 soft (confidence/actuation gate) |
-| `src/crude/phase.cljc` | **Phase 0→3** -- read-only → assisted intake → assisted assess → supervised (lift/settlement always human; well intake is the ONLY auto-eligible op, no direct capital risk) |
-| `src/crude/operation.cljc` | **OperationActor** -- langgraph StateGraph |
-| `src/crude/sim.cljc` | demo driver |
+| `src/crude/store.cljk` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + lift AND production history (dual history). The double-actuation guard checks dedicated `:crude-lifted?`/`:production-settled?` booleans rather than a `:status` value |
+| `src/crude/registry.cljk` | Lift/settlement draft records, plus the self-contained well-safety range-check pure functions (`reservoir-pressure-out-of-range?`, `well-integrity-annular-pressure-excessive?`, `water-cut-excessive?`, `h2s-toxic?`) the governor re-verifies against -- no external capability library to delegate to |
+| `src/crude/facts.cljk` | Per-jurisdiction well-construction/well-control/sour-service catalog with an official spec-basis citation + NIOSH H2S IDLH per entry, honest coverage reporting |
+| `src/crude/crudeadvisor.cljk` | **CrudeAdvisor** -- `mock-advisor` ‖ `llm-advisor`; intake/reservoir-assessment/lift/settlement proposals |
+| `src/crude/governor.cljk` | **Well Safety Governor** -- 7 HARD checks (spec-basis · evidence-incomplete · reservoir-pressure-out-of-range, the aerospace two-sided-tolerance discipline · well-integrity-annular-pressure-excessive, the fabrication ratio discipline · water-cut-excessive · h2s-toxic-threshold · integrity-flag-unresolved) + 2 double-actuation guards + 1 soft (confidence/actuation gate) |
+| `src/crude/phase.cljk` | **Phase 0→3** -- read-only → assisted intake → assisted assess → supervised (lift/settlement always human; well intake is the ONLY auto-eligible op, no direct capital risk) |
+| `src/crude/operation.cljk` | **OperationActor** -- langgraph StateGraph |
+| `src/crude/sim.cljk` | demo driver |
 | `test/crude/*_test.clj` | governor contract · phase invariants · store parity · registry conformance · facts coverage |
 
 ## Business-process coverage (honest)

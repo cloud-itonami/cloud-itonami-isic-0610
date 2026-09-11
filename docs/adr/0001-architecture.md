@@ -123,7 +123,7 @@ real status-lifecycle bug (ADR-2607071320).
 
 `crude.store/Store` is implemented by both `MemStore` (atom-backed, default
 for dev/tests/demo) and `DatomicStore` (`langchain.db`-backed), proven to
-satisfy the same contract in `test/crude/store_contract_test.clj`. The
+satisfy the same contract in `test/crude/store_contract_test.cljk`. The
 ledger stays append-only on every backend: which well was screened for a
 reservoir pressure outside its window, an annular pressure above MAASP, a
 water cut above the BSW limit, an H2S concentration above the IDLH, or an
@@ -180,7 +180,7 @@ hiccup can never auto-lift a well or auto-settle production.
   no genuinely-new-concept check, all discipline-reuse documented as such per
   `cloud-itonami-isic-0162` Decision 3.
 - `MemStore` || `DatomicStore` parity is proven by
-  `test/crude/store_contract_test.clj`.
+  `test/crude/store_contract_test.cljk`.
 - 41 tests / 204 assertions pass; lint is clean; the demo
   (`clojure -M:dev:run`) walks one clean lift + settlement lifecycle, plus
   eight HARD-hold scenarios (no spec-basis, reservoir pressure, annular/

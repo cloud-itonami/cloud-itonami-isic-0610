@@ -1,5 +1,5 @@
 (ns crude.sim
-  "Demo driver -- `clojure -M:dev:run`. Walks a clean well through
+  "Demo driver -- `kbb -M:dev:run`. Walks a clean well through
   intake -> reservoir safety assessment -> crude lift (escalate/
   approve/commit) -> production settlement (escalate/approve/commit),
   then shows HARD-hold scenarios: a jurisdiction with no spec-basis,

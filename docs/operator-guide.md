@@ -81,7 +81,7 @@ spec-basis, a lift started with incomplete evidence or outside the reservoir-
 pressure window, an integrity flag suppressed to force a lift through, or a
 settlement posted without a human sign-off.
 
-## Feel the Decision Gate: `clojure -M:dev:run`
+## Feel the Decision Gate: `kbb -M:dev:run`
 
 This vertical has no companion playable prototype yet (unlike the freight
 sibling's `itonami/freight-dispatch` game). The fastest hands-on way to feel

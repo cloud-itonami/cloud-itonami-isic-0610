@@ -1,0 +1,29 @@
+{:physics/schema "itonami.physical-ai.spec.v1"
+ :repo "cloud-itonami/cloud-itonami-isic-0610"
+ :cases
+ [{:id :flowline-to-battery
+   :kind :pipe-flow
+   :procedure "after the wellhead robot opens the tree, crude flows through a 3-inch flowline to the tank battery"
+   :params {:diameter-m 0.0779 :length-m 1500.0 :roughness-m 4.5e-5
+            :density-kg-m3 850.0 :viscosity-pa-s 0.01 :pump-efficiency 0.65 :elevation-m 20.0}
+   :sweep {:param :q-m3s :values [0.002 0.004 0.006 0.008 0.010]}
+   :quantity :pressure-drop-pa
+   :limit {:max 3.0e6 :basis "estimate: ~30 bar available between flowing tubing-head pressure and battery separator pressure"}
+   :boundary {:lo 5.0e-4 :hi 0.02}}
+  {:id :test-tank-drain
+   :kind :tank-drain
+   :procedure "robot opens the drain on a 3 m production test tank to send the gauged crude to the sales line"
+   :params {:tank-area-m2 7.07 :h0-m 4.0 :h-target-m 0.3 :cd 0.62 :dt-s 1.0}
+   :sweep {:param :orifice-area-m2 :values [0.002 0.004 0.0081 0.012 0.018]}
+   :quantity :time-to-target-s
+   :limit {:max 3600.0 :basis "estimate: test tank must be emptied within one hour to take the next well test"}
+   :boundary {:lo 0.001 :hi 0.03}}
+  {:id :lubricator-section-lift
+   :kind :manipulator
+   :procedure "wellhead robot arm lifts a wireline lubricator section or tree cap onto the tree"
+   :params {:l1-m 0.80 :l2-m 0.70 :m1-kg 15.0 :m2-kg 10.0
+            :from [0.80 0.0] :to [0.30 1.10] :duration-s 3.0 :steps 500}
+   :sweep {:param :payload-kg :values [5.0 10.0 20.0 30.0 40.0]}
+   :quantity :peak-tau1-nm
+   :limit {:max 400.0 :basis "estimate: continuous shoulder torque of an explosion-proof ~40 kg class wellsite arm"}
+   :boundary {:lo 1.0 :hi 120.0}}]}
